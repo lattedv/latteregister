@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
   .setColor("BLACK")
   .setTitle("SANCTUS SAY SİSTEMİ")
   .setDescription(`
- ✔ Sunucudaki Toplam Üye **${üye}**
+  \<a:onay:858284659443761162> Sunucudaki Toplam Üye **${üye}**
  🔉 Sunucdaki Toplam Sesteki Üye **${sestekiüye}**
  🟢 Sunucudaki Toplam Çevrimiçi Üye **${online}**
   Tagımızı Alan Toplam Üye **${ailem}**

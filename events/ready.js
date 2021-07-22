@@ -11,7 +11,7 @@ module.exports = client => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LATTE ALTYAPI: HER DAİM SİZLERLE`);//BURALARI DEĞİŞTİRE BİLİRSİNİZ 
   client.user.setStatus("dnd");
   //idle : Boşta dnd : rahatsız Etmeyin online : çevrimiçi
- client.user.setActivity("LATTE <3 KAYIT", { type: "WATCHING" });
+ client.user.setActivity("Latte🧡Diaz", { type: "WATCHING" });
   // PLAYING : oynuyur LISTENING : dinliyor  WATCHING : İZLİOR 
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LATTE ALTYAPI: Oyun ismi ayarlandı!`);
 };

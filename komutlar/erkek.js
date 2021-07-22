@@ -25,7 +25,7 @@ if(member.id === client.user.id) return message.channel.send('Botu kayıt edemez
 if(member.id === message.guild.OwnerID) return message.channel.send('Sunucu sahibini kayıt edemezsin.')
 if(member.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(`Bu kullanıcı sizden üst/aynı pozsiyondadır.`)
   
-if(!args[0]) return message.channel.send('**\<a:redgif:853591843630219304> Bir kullanıcı belirt.**')  
+if(!args[0]) return message.channel.send('**\<a:nani:858286151407239168> Bir kullanıcı belirt.**')  
 let timereplace = args[0];
 let time = timereplace.replace(/y/, ' yıl').replace(/d/, ' gün').replace(/s/, ' saniye').replace(/m/, ' dakika').replace(/h/, ' saat') 
  datab.add('case', 1)
@@ -42,8 +42,8 @@ let time = timereplace.replace(/y/, ' yıl').replace(/d/, ' gün').replace(/s/, 
 let tag = ayarlar.tag
 let name = args[1]
 let age = Number(args[2])
-if(!name) return message.channel.send('**\<a:no:854088016522772541> | Bir __isim__ belirt.**')
-if(!age) return message.channel.send('**\<a:no:854088016522772541> | Bir __yaş__ belirt.**')
+if(!name) return message.channel.send('**\<a:nani:858286151407239168> | Bir __isim__ belirt.**')
+if(!age) return message.channel.send('**\<a:nani:858286151407239168> | Bir __yaş__ belirt.**')
    
 datab.add(`yetkili.${message.author.id}.erkek`, 1)
 datab.add(`yetkili.${message.author.id}.toplam`, 1)
@@ -76,7 +76,7 @@ member.roles.remove(kayıtsız)
   datab.set(`kayıtT.${member.id}.${message.guild.id}`, new Date().getTime());
 
 const embed = new Discord.MessageEmbed()
-.setTitle("\<a:onay:853152648953200660> | Kayıt Başarılı")
+.setTitle("\<a:onay:858284659443761162> | | Kayıt Başarılı")
 .setThumbnail(member.user.avatarURL({dynamic: true}))
 .setDescription(`
 **Kayıt eden yetkili : ${message.author}
@@ -84,7 +84,7 @@ Kayıt Edilen kullanıcı : ${member}
 Kayıt İşleminde Verilen Rol : <@&${ayarlar.erkekROL}>
 Yeni Kullanıcı Adı :  \`${tag} ${name} | ${age}\` **
 
- **Bu Kullanıcının Sunucudaki Eski İsimleri;**`).setColor('0x348f36').setFooter(message.author.tag, message.author.avatarURL({dynamic: true})).setTimestamp()   
+`).setColor('0x348f36').setFooter(message.author.tag, message.author.avatarURL({dynamic: true})).setTimestamp()   
 
 
 

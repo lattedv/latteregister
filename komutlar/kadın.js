@@ -20,12 +20,12 @@ return message.reply(`**Bu komutu sadece __KAYIT SORUMLULARI__ kullana bilir.**`
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 
 if(!member) return message.channel.send(`Bir kullanıcı belirt.`)
-if(member.id === message.author.id) return message.channel.send('**<a:no:854088016522772541> | Kendini kayıt edemezsin.**')
-if(member.id === client.user.id) return message.channel.send('**<a:no:854088016522772541> | Botu kayıt edemezsin.**')
-if(member.id === message.guild.OwnerID) return message.channel.send('**<a:no:854088016522772541> | Sunucu sahibini kayıt edemezsin.**')
+if(member.id === message.author.id) return message.channel.send('**\<a:nani:858286151407239168> | Kendini kayıt edemezsin.**')
+if(member.id === client.user.id) return message.channel.send('**\<a:nani:858286151407239168> | Botu kayıt edemezsin.**')
+if(member.id === message.guild.OwnerID) return message.channel.send('**\<a:nani:858286151407239168> | Sunucu sahibini kayıt edemezsin.**')
 if(member.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(`Bu kullanıcı sizden üst/aynı pozsiyondadır.`)
   
-if(!args[0]) return message.channel.send('**<a:no:854088016522772541> | Bir kullanıcı belirt.**')  
+if(!args[0]) return message.channel.send('**\<a:nani:858286151407239168> | Bir kullanıcı belirt.**')  
 let timereplace = args[0];
 let time = timereplace.replace(/y/, ' yıl').replace(/d/, ' gün').replace(/s/, ' saniye').replace(/m/, ' dakika').replace(/h/, ' saat') 
  datab.add('case', 1)
@@ -42,8 +42,8 @@ let time = timereplace.replace(/y/, ' yıl').replace(/d/, ' gün').replace(/s/, 
 let tag = ayarlar.tag
 let name = args[1]
 let age = Number(args[2])
-if(!name) return message.channel.send('**<a:no:854088016522772541> | Bir __isim__ belirt.**')
-if(!age) return message.channel.send('**<a:no:854088016522772541> | Bir __yaş__ belirt.**')
+if(!name) return message.channel.send('**\<a:nani:858286151407239168> | Bir __isim__ belirt.**')
+if(!age) return message.channel.send('**\<a:nani:858286151407239168> | Bir __yaş__ belirt.**')
    
 datab.add(`yetkili.${message.author.id}.erkek`, 1)
 datab.add(`yetkili.${message.author.id}.toplam`, 1)
@@ -60,7 +60,7 @@ member.roles.remove(kayıtsız)
   await datab.push(`Eskiİsimler.${message.guild.id}.${member.id}`, `${name} | ${age}`);
 
   let fdh = datab.fetch(`Eskiİsimler.${message.guild.id}.${member.id}`);
-  if (!fdh | fdh === [] || fdh.length === 0 || fdh.length < 1) return message.channel.send('**<a:no:854088016522772541> | Eski isimleri bulunmadı!**').then(x => x.delete({ timeout: 9000}))
+  if (!fdh | fdh === [] || fdh.length === 0 || fdh.length < 1) return message.channel.send('**\<a:nani:858286151407239168> | Eski isimleri bulunmadı!**').then(x => x.delete({ timeout: 9000}))
 
   let uzunluk;
   if (fdh.length >= 11) uzunluk = 10
@@ -76,7 +76,7 @@ member.roles.remove(kayıtsız)
   datab.set(`kayıtT.${member.id}.${message.guild.id}`, new Date().getTime());
 
 const embed = new Discord.MessageEmbed()
-.setTitle("<a:onay:853152648953200660> Kayıt Başarılı")
+.setTitle("\<a:onay:858284659443761162> | Kayıt Başarılı")
 .setThumbnail(member.user.avatarURL({dynamic: true}))
 .setDescription(`
 
@@ -85,7 +85,7 @@ Kayıt Edilen kullanıcı : ${member}
 Kayıt İşleminde Verilen Rol : <@&${ayarlar.kadınROL}>
 Yeni Kullanıcı Adı :  \`${tag} ${name} | ${age}\` **
 
-**Bu Kullanıcının Sunucudaki Eski İsimleri; ** `)
+`)
 
 .setColor("0x348f36")
 .setTimestamp()

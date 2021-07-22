@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json')
 
 exports.run = async (client, message, args) => {
 
-if(!message.member.roles.cache.some(r => [(ayarlar.yetkiliROL)].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))return message.reply(`**<a:no:854088016522772541>| Bu komutu sadece __KAYIT SORUMLULARI__ kullana bilir.**`)
+if(!message.member.roles.cache.some(r => [(ayarlar.yetkiliROL)].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))return message.reply(`**\<a:nani:858286151407239168> | Bu komutu sadece __KAYIT SORUMLULARI__ kullana bilir.**`)
  
  let kullanıcı = message.mentions.users.first()
     

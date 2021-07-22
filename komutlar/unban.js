@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
       new MessageEmbed()
         .setColor("BLUE")
         .setDescription(
-          `**<a:no:854088016522772541> | Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin!**`
+          `**\<a:nani:858286151407239168> | Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin!**`
         )
     );
   let user = args[0];
@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
         .setColor("BLUE")
         .setTitle("Hata Kullanım ")
         .setDescription(
-          `**<a:no:854088016522772541> | Hatalı ID veya kullanıcı banlı değil.**`
+          `**\<a:nani:858286151407239168> | Hatalı ID veya kullanıcı banlı değil.**`
         )
     );
   }
@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
       .setDescription(
         `<@${args[0]}> \`(${
           args[0]
-        })\` adlı kullanıcının yasağı kaldırıldı. | <a:yes:854087970516500510> `
+        })\` adlı kullanıcının yasağı kaldırıldı. | \<a:yes:858286551761813504> `
       )
   );
 };

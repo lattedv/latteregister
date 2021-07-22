@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 exports.run = async(yashinu, message, args) => {
-  if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.MessageEmbed().setColor("BLUE").setDescription(`**<a:no:854088016522772541> | Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin!**`)).then(beta => beta.delete({timeout: 3000}));
-  if (!args[0] || isNaN(args[0])) return message.reply(`**<a:no:854088016522772541> |  Temizlenecek mesaj miktarını belirtmelisin!**`).then(beta2 => beta2.delete({timeout: 3000}));;
+  if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.MessageEmbed().setColor("BLUE").setDescription(`**\<a:nani:858286151407239168> | Bu komutu kullanabilmek için gerekli yetkiye sahip değilsin!**`)).then(beta => beta.delete({timeout: 3000}));
+  if (!args[0] || isNaN(args[0])) return message.reply(`**\<a:nani:858286151407239168> |  Temizlenecek mesaj miktarını belirtmelisin!**`).then(beta2 => beta2.delete({timeout: 3000}));;
   message.delete();
   let rexussayi = Number(args[0]);
   let rexussilinen = 0;
@@ -11,7 +11,7 @@ exports.run = async(yashinu, message, args) => {
     rexussayi = rexussayi-100;
   };
   if (rexussayi > 0)  message.channel.bulkDelete(rexussayi).then(r => rexussilinen+=r.size);
-  message.channel.send(`**<a:yes:854087970516500510> | \`\`${args[0]}\`\` adet mesaj silindi.** !`).then(beta3 => beta3.delete({timeout: 5000}));
+  message.channel.send(`**\<a:yes:858286551761813504> | \`\`${args[0]}\`\` adet mesaj silindi.**`).then(beta3 => beta3.delete({timeout: 5000}));
 };
 
 exports.conf = {
